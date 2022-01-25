@@ -2,3 +2,21 @@
     color: red;
     opacity: 0.5;
 }
+
+.todo-item {
+    margin: 10px 10px;
+    border: 1px solid #bfbfc1;
+    height: auto;
+    width: auto;
+    text-align: left;
+}
+
+.text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-danger {
+    float: right;
+    margin: -19px 10px;
+}
