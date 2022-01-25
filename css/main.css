@@ -18,5 +18,16 @@
 
 .btn-danger {
     float: right;
-    margin: -19px 10px;
+    margin: -23px 10px;
+}
+
+.btn-complete {
+    margin: 0 0 0 75%;
+    position: relative;
+    left: 95px;
+    top: -14px;
+}
+
+.description {
+    margin: 2% 2% -1%
 }
