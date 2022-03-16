@@ -1,5 +1,5 @@
-const addTascyBtn = document.getElementById('btn');
-const descTascyInput = document.getElementById('description-task');
+const addTaskBtn = document.getElementById('btn');
+const descTaskInput = document.getElementById('description-task');
 const toDosWrapper = document.querySelector('.content-wrapper');
 
 let tasks; // при инициализации проверяем localStoreig и если что-то есть отправляю в масссив
@@ -18,7 +18,7 @@ const createTemplate = (task, index) => {
         <div class="description">${task.description}</div>
         <div class="buttons">
             <input onclick="comleteTasks(${index})" class="btn-complete" type="checkbox" ${task.completed ? 'checked' : ''}/>
-            <button onclick="deleteTasks(${index})" class="btn btn-danger">Delete</button>
+            <button onclick="deleteTasks(${index})" class="btn btn-danger">Удалить</button>
         </div>
      </div>
     `
@@ -58,12 +58,12 @@ const comleteTasks = index => {
 }
 
 // по клику создаем новый обьект и предаем его в массив таскс
-addTascyBtn.addEventListener('click', () => {
-    tasks.push(new Task(descTascyInput.value));
+addTaskBtn.addEventListener('click', () => {
+    tasks.push(new Task(descTaskInput.value));
     console.log(tasks);
     updateLocal();
     fillHtmlList();
-    descTascyInput.value = '';
+    descTaskInput.value = '';
 })
 
 const deleteTasks = index => {
